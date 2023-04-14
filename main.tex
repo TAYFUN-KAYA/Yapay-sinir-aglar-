@@ -523,6 +523,8 @@ uzun soluklu görebilmek için num epochs = 10'dan 100'e çıkarttım.
 
 \subsection{(2 puan)} \textbf{Kodlarda regülarizasyon eklediğiniz kısımları aşağı koyun:} 
 
+Dropout Yöntemi
+
 \begin{python}
 # Dropout Regülerizasyonu
 import torch
@@ -554,9 +556,13 @@ output_size = 1
 
 model = MLP(input_size, hidden_size1, hidden_size2, output_size)
 
-# L2 normu regülerizasyonu
-#l2_lambda = 0.01
-#optimizer = optim.Adam(model.parameters(), lr=0.001, #weight_decay=l2_lambda)
+\end{python}
+
+L2 regülerizasyonu
+
+\begin{python}
+l2_lambda = 0 . 01
+optimizer = optim . Adam ( model . parameters () , lr = 0 . 001 , weight_decay = l2_lambda )
 \end{python}
 
 \subsection{(2 puan)} \textbf{Test setinden yeni accuracy, F1, precision ve recall değerlerini hesaplayıp aşağı koyun:}
